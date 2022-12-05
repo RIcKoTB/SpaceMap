@@ -1,0 +1,302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{155D8454-3D74-415D-BC73-89750D35833B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SpaceMap</RootNamespace>
+    <AssemblyName>SpaceMap</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SolarSystem.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="FontAwesome.Sharp, Version=6.1.1.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.1.1\lib\net48\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignColors, Version=2.0.7.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignColors.2.0.7-ci302\lib\net462\MaterialDesignColors.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialDesignThemes.Wpf, Version=4.6.0.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialDesignThemes.4.6.0-ci302\lib\net462\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AuthorizationWindow.xaml.cs">
+      <DependentUpon>AuthorizationWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MGEarthWindow.xaml.cs">
+      <DependentUpon>MGEarthWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MGMarsWindow.xaml.cs">
+      <DependentUpon>MGMarsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MGMerkuryWindow.xaml.cs">
+      <DependentUpon>MGMerkuryWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MGNeptunWindow.xaml.cs">
+      <DependentUpon>MGNeptunWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MGSaturnWindow.xaml.cs">
+      <DependentUpon>MGSaturnWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MGUpiterWindow.xaml.cs">
+      <DependentUpon>MGUpiterWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MGUranWindow.xaml.cs">
+      <DependentUpon>MGUranWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MGVeneraWindow.xaml.cs">
+      <DependentUpon>MGVeneraWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterWindow.xaml.cs">
+      <DependentUpon>RegisterWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AuthorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="MGEarthWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MGMarsWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MGMerkuryWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MGNeptunWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MGSaturnWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MGUpiterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MGUranWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MGVeneraWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Main.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Neptun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Uran.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Saturn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Upiter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Earth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Mars.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Venera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\Merkury.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\car1.png" />
+    <Resource Include="Photo\car2.png" />
+    <Resource Include="Photo\car3.png" />
+    <Resource Include="Photo\car4.png" />
+    <Resource Include="Photo\car5.png" />
+    <Resource Include="Photo\car6.png" />
+    <Resource Include="Photo\orange.jpg" />
+    <Resource Include="Photo\pacman.jpg" />
+    <Resource Include="Photo\pink.jpg" />
+    <Resource Include="Photo\playerImage.png" />
+    <Resource Include="Photo\powermode1.png" />
+    <Resource Include="Photo\powermode2.png" />
+    <Resource Include="Photo\powermode3.png" />
+    <Resource Include="Photo\powermode4.png" />
+    <Resource Include="Photo\red.jpg" />
+    <Resource Include="Photo\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Photo\clouds.png" />
+    <Resource Include="Photo\clouds2.png" />
+    <Resource Include="Photo\flappyBird.png" />
+    <Resource Include="Photo\pipeBottom.png" />
+    <Resource Include="Photo\pipeTop.png" />
+    <Resource Include="Photo\1.png" />
+    <Resource Include="Photo\2.png" />
+    <Resource Include="Photo\3.png" />
+    <Resource Include="Photo\4.png" />
+    <Resource Include="Photo\5.png" />
+    <Resource Include="Photo\player.png" />
+    <Resource Include="Photo\purple.png" />
+    <Resource Include="Photo\background.gif" />
+    <Resource Include="Photo\newRunner_01.gif" />
+    <Resource Include="Photo\newRunner_02.gif" />
+    <Resource Include="Photo\newRunner_03.gif" />
+    <Resource Include="Photo\newRunner_04.gif" />
+    <Resource Include="Photo\newRunner_05.gif" />
+    <Resource Include="Photo\newRunner_06.gif" />
+    <Resource Include="Photo\newRunner_07.gif" />
+    <Resource Include="Photo\newRunner_08.gif" />
+    <Resource Include="Photo\obstacle.png" />
+    <Resource Include="Photo\background.jpg" />
+    <Resource Include="Photo\netLeft.png" />
+    <Resource Include="Photo\netRight.png" />
+    <Resource Include="Photo\present_01.png" />
+    <Resource Include="Photo\present_02.png" />
+    <Resource Include="Photo\present_03.png" />
+    <Resource Include="Photo\present_04.png" />
+    <Resource Include="Photo\present_05.png" />
+    <Resource Include="Photo\present_06.png" />
+    <Resource Include="Photo\background2.png" />
+    <Resource Include="Photo\dummy01.png" />
+    <Resource Include="Photo\dummy02.png" />
+    <Resource Include="Photo\dummy03.png" />
+    <Resource Include="Photo\dummy04.png" />
+    <Resource Include="Photo\ghost.png" />
+    <Resource Include="Photo\sniper-aim.png" />
+    <Resource Include="SolarSystem.ico" />
+    <Content Include="Sound\clickedpop.mp3" />
+    <Content Include="Sound\pop.mp3" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\MaterialDesignThemes.4.6.0-ci302\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.6.0-ci302\build\MaterialDesignThemes.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\MaterialDesignThemes.4.6.0-ci302\build\MaterialDesignThemes.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\MaterialDesignThemes.4.6.0-ci302\build\MaterialDesignThemes.targets'))" />
+  </Target>
+</Project>

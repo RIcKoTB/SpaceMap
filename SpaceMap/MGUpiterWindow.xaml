@@ -1,0 +1,19 @@
+﻿<Window x:Class="SpaceMap.MGUpiterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SpaceMap"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="Space 22"
+        Icon="Photo/Main.jpg" Height="700" Width="525" ResizeMode="CanMinimize">
+    <Canvas Name="myCanvas" Background="Orange" Focusable="True" MouseMove="Canvas_MouseMove">
+
+        <Label FontWeight="ExtraBlack" FontSize="18" Name="ScoreText">Caught:</Label>
+        <Label FontWeight="ExtraBlack" FontSize="18" Name="missedText" Canvas.Left="387">Missed:</Label>
+
+        <Rectangle Tag="playerRect" Name="player1" Width="80" Height="80" Canvas.Left="217" Canvas.Top="589"/>
+
+    </Canvas>
+</Window>
